@@ -4,7 +4,8 @@
     <property name="APP_NAME" value="${app.name}"/>
     <property name="LOG_PATH" value="${user.home}/${APP_NAME}/logs"/>
     <property name="LOG_FILE" value="${LOG_PATH}/application.log"/>
-
+    <property name="log.pattern"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n" />
     <appender name="APPLICATION"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_FILE}</file>
